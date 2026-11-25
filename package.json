@@ -1,0 +1,43 @@
+{
+  "name": "dsh-precise-search",
+  "version": "0.1.0",
+  "description": "DSH 精准搜索：跨会话检索提问与回答正文，点击定位到关键词并高亮。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "engines": {
+      "dsh": ">=0.2.2-alpha.3"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "sessions"
+      ]
+    }
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "check": "node --check lib/index.js && node --check lib/search.js && node --check client.js",
+    "test": "node --test test/*.test.mjs"
+  }
+}
