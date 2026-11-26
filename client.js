@@ -121,6 +121,7 @@ function ensureStyle() {
       box-shadow:0 18px 60px rgba(0,0,0,.3);
       font:14px/1.55 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;
     }
+    .dps-entry[hidden],.dps-panel[hidden]{display:none}
     .dps-head{display:flex;align-items:center;border-bottom:1px solid var(--dsw-alias-border-l3,rgba(127,127,127,.18))}
     .dps-input{
       flex:1;width:100%;border:0;outline:0;background:transparent;color:inherit;
