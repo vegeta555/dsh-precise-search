@@ -14,6 +14,12 @@
  * 刻意不做的事：不接管宿主的会话视图、不改会话 DOM、不猜"最近的一行"。
  */
 
+// 浏览器半体通过宿主加载器注册，exports 只存在于模块工厂内。
+window.__ModuleLoader__.load({
+  id: 'dsh-precise-search',
+  factory: () => {
+const exports = {}
+
 const STYLE_ID = 'dsh-precise-search-style'
 const ENTRY_ATTR = 'data-dsh-precise-search-entry'
 const MIN_QUERY = 2
@@ -762,3 +768,7 @@ exports.apply = (ctx) => {
     }
   })
 }
+
+return exports
+  },
+})
