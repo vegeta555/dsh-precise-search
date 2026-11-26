@@ -26,7 +26,7 @@ DSH（DeepSeek Harness）的会话正文搜索插件：跨会话搜索**提问�
 ## 安装
 
 ```bash
-dsh plugin --profile <profile> add link:D:/develop/dsh
+dsh plugin --profile <profile> add link:D:/develop/dsh/dsh-precise-search
 ```
 
 或在 DSH 的「插件 → 添加插件」中填本目录的绝对路径。安装后需要重启 DSH（宿主半体在进程启动时加载）。
